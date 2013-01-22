@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankMe", "RankMe\RankMe.csproj", "{4776F976-2BEF-471E-AF3A-AD468600FE90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankMe.Tests", "RankMe.Tests\RankMe.Tests.csproj", "{59407AB5-1341-49CE-855F-872E35D6B03C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4776F976-2BEF-471E-AF3A-AD468600FE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4776F976-2BEF-471E-AF3A-AD468600FE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4776F976-2BEF-471E-AF3A-AD468600FE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4776F976-2BEF-471E-AF3A-AD468600FE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59407AB5-1341-49CE-855F-872E35D6B03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59407AB5-1341-49CE-855F-872E35D6B03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59407AB5-1341-49CE-855F-872E35D6B03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59407AB5-1341-49CE-855F-872E35D6B03C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
