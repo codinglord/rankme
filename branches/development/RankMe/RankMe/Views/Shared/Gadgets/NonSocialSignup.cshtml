@@ -1,0 +1,116 @@
+﻿@using RankMe.Utilities
+
+<div id="@Helper.GetGadgetId(this)" class="gadget-NonSocialSignup  ui-widget-container" >
+<form onsubmit="return false;">
+
+
+    <div class="ui-widget-container">
+        <h3>Create Account</h3>
+    </div>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><input id="txtEmail" name="txtEmail" title="Email Address" /></td>
+            </tr>
+            <tr>
+                <td><input id="txtName" name="txtName" title="Name (optional)" /></td>
+            </tr>
+            <tr>
+                <td><input id="txtPasword" name="txtPasword" title="Password" type="password" /></td>
+            </tr>
+            <tr>
+                <td><input id="txtConfirmPassword" name="txtConfirmPassword" title="Confirm Password" type="password" /></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <button value="Create Account" id="btnCreateAccount">Create Account</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    By registering, you agree to the privacy policy and terms of service.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+ 
+</form>
+</div>
+ 
+<script>
+    
+    (function (ctx) {
+
+        
+
+        ctx.find('input')
+           .filter(':text,:password')
+           .each(function (i, iObj) {
+               console.log(iObj);
+               $(iObj).watermark($(iObj).attr('title'));
+           });
+
+
+
+        var validator = ctx.find('form').validate({
+                        rules: {
+                            txtEmail: "required",
+                            txtPasword: "required",
+                            txtConfirmPassword: "required"
+                        },
+                        messages: {
+                            txtEmail: "Enter your email adress.",
+                            txtPasword: "Enter your password.",
+                            txtConfirmPassword: "Enter confirm password."
+                        }
+        });
+        
+
+        ctx.find('#btnCreateAccount').click(function () {
+
+       
+            
+         
+            var model = new $.codeengine.models.RankMeUser();
+            var params = {
+                rankMeUser: model,
+                password: null
+            };
+
+            //Set parameters
+            model.Email = ctx.find('#txtEmail').val();
+            model.UserName = ctx.find('#txtName').val();
+            model.AvatarUrl = null;
+            model.Status = 1;
+            params.password = ctx.find('#txtPasword').val();
+
+            
+
+            if (validator.form()) {
+                $.helper.ajaxPost('/RankMeAccount/Signup', params, {
+                    success: function () {
+                        $.helper.notify('Account has been created successfully.', 'complete');
+                    },
+                    error: function (e) {
+                        $.helper.notify(e.responseText, 'error');
+                    }
+                })
+    
+
+                
+            }
+            else {
+                $.helper.notify('Please check your information', 'error');
+            }
+
+
+        });
+
+    })($('#@Helper.GetGadgetId(this)'));
+
+
+</script>
+

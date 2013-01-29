@@ -1,0 +1,5 @@
+C:\Projects\GITsDEMO\rankme\branches\development\RankMe\RankMe.Entities\bin\Debug\RankMe.Entities.dll
+C:\Projects\GITsDEMO\rankme\branches\development\RankMe\RankMe.Entities\bin\Debug\RankMe.Entities.pdb
+C:\Projects\GITsDEMO\rankme\branches\development\RankMe\RankMe.Entities\obj\Debug\RankMe.Entities.csprojResolveAssemblyReference.cache
+C:\Projects\GITsDEMO\rankme\branches\development\RankMe\RankMe.Entities\obj\Debug\RankMe.Entities.dll
+C:\Projects\GITsDEMO\rankme\branches\development\RankMe\RankMe.Entities\obj\Debug\RankMe.Entities.pdb

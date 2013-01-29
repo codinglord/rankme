@@ -18,6 +18,19 @@ namespace RankMe
 				url: "{controller}/{action}/{id}",
 				defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
 			);
+
+
+			//routes.MapRoute(
+			//	name: "Signup",
+			//	url: "{controller}/{action}",
+			//	defaults: new {
+			//		controller = "RankMeAccount",
+			//		action = "Signup",
+			//		rankMeUser = 
+			//	}
+			//);
+
+
 		}
 	}
 }

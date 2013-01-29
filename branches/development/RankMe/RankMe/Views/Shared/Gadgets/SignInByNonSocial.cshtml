@@ -1,0 +1,54 @@
+﻿@using RankMe.Utilities
+
+
+
+<div id="@Helper.GetGadgetId(this)" class="gadget-SignInBySocial ui-widget-container">
+
+   
+    <div class="ui-widget-header">
+
+        Login
+
+    </div>
+
+    <div class="gadget-description">
+
+            <p>
+                To sign in with RankMe, please enter your username or email address below.
+            </p>
+
+        </div>
+
+    <div class="">
+
+        <input id="txtUsername" />
+
+        <input id="txtPassword" type="password" />
+
+        <button id="btnSubmit" type="button">Log In</button>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+    (function (ctx) {
+
+        ctx.find('#txtUsername').watermark('Username or Email');
+        ctx.find('#txtPassword').watermark('Password');
+        ctx.find('#btnSubmit').click(function () {
+
+            $.helper.ajaxPost('/RankMeAccount/SignIn', {
+                'username': ctx.find('#txtUsername').val(),
+                'password': ctx.find('#txtPassword').val()
+            });
+
+        });
+
+
+    })($('#@Helper.GetGadgetId(this)'));
+
+</script>

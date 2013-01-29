@@ -18,15 +18,15 @@ namespace RankMe
 			//    clientId: "",
 			//    clientSecret: "");
 
-			//OAuthWebSecurity.RegisterTwitterClient(
-			//    consumerKey: "",
-			//    consumerSecret: "");
+			OAuthWebSecurity.RegisterTwitterClient(
+				consumerKey: "U5euqaeIdbIqLR1S4JDmw",
+				consumerSecret: "1QH94TYqmzeBrwdsCQoFVPfN4yQVLKn1JndrWChVw");
 
 			//OAuthWebSecurity.RegisterFacebookClient(
-			//    appId: "",
-			//    appSecret: "");
+			//	appId: "",
+			//	appSecret: "");
 
-			//OAuthWebSecurity.RegisterGoogleClient();
+			OAuthWebSecurity.RegisterGoogleClient();
 		}
 	}
 }

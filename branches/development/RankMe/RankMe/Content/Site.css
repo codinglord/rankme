@@ -754,3 +754,40 @@ tr.pager td {
             margin: 0;
         }
 }
+
+
+
+
+
+.gadget-AccountRecovery,
+.gadget-NonSocialSignup,
+.gadget-SignInBySocial
+{
+	border:dashed 1px green;
+	padding:5px 5px 5px 5px;
+}
+
+
+.gadget-description {
+	color: #333;
+	font-size: 120%;
+	margin: 0 1.2em 0.5em 0;
+	line-height: 120%;
+}
+
+
+br { clear: both; }
+input { border: 1px solid black; margin-bottom: .5em;  }
+input.error { border: 1px solid red; }
+label.error {
+	background: url('http://dev.jquery.com/view/trunk/plugins/validate/demo/images/unchecked.gif') no-repeat;
+	padding-left: 16px;
+	margin-left: .3em;
+    display:inline;
+}
+label.valid {
+	background: url('http://dev.jquery.com/view/trunk/plugins/validate/demo/images/checked.gif') no-repeat;
+	display: block;
+	width: 16px;
+	height: 16px;
+}

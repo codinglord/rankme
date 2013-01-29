@@ -23,6 +23,13 @@ namespace RankMe
 			bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
 						"~/Scripts/modernizr-*"));
 
+
+			bundles.Add(new ScriptBundle("~/bundles/enginescript").Include(
+						"~/Scripts/Helpers/commonlib.js",
+						"~/Scripts/Entities/models.js"
+						));
+
+
 			bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
 			bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(

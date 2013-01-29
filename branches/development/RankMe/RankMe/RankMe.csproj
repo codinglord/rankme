@@ -162,13 +162,37 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RankMeAccountController.cs" />
+    <Compile Include="Exceptions\RankMeManagedException.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201301271054354_initial.cs" />
+    <Compile Include="Migrations\201301271054354_initial.Designer.cs">
+      <DependentUpon>201301271054354_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201301281357591_AddExtraUserInformation.cs" />
+    <Compile Include="Migrations\201301281357591_AddExtraUserInformation.Designer.cs">
+      <DependentUpon>201301281357591_AddExtraUserInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201301281412458_initial1.cs" />
+    <Compile Include="Migrations\201301281412458_initial1.Designer.cs">
+      <DependentUpon>201301281412458_initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201301281413424_AddExtraUserInformation1.cs" />
+    <Compile Include="Migrations\201301281413424_AddExtraUserInformation1.Designer.cs">
+      <DependentUpon>201301281413424_AddExtraUserInformation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ExternalUserInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Helper.cs" />
+    <Compile Include="Utilities\KeyValuePair.cs" />
+    <Compile Include="Utilities\TemplateManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -242,7 +266,9 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -281,12 +307,38 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Gadgets\AccountRecovery.cshtml" />
+    <Content Include="Views\Shared\Gadgets\NonSocialSignup.cshtml" />
+    <Content Include="Views\Shared\Gadgets\SignInByNonSocial.cshtml" />
+    <Content Include="Views\Shared\Gadgets\SignInBySocial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RankMe.Entities\RankMe.Entities.csproj">
+      <Project>{15183a17-aebe-4b39-90d5-766c5a498508}</Project>
+      <Name>RankMe.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201301271054354_initial.resx">
+      <DependentUpon>201301271054354_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201301281357591_AddExtraUserInformation.resx">
+      <DependentUpon>201301281357591_AddExtraUserInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201301281412458_initial1.resx">
+      <DependentUpon>201301281412458_initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201301281413424_AddExtraUserInformation1.resx">
+      <DependentUpon>201301281413424_AddExtraUserInformation1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -306,7 +358,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:54274/</IISUrl>
+          <IISUrl>http://localhost:53934/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

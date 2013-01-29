@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rankme>
+
+	<template id="RecoveryEmail">
+		
+		<![CDATA[
+
+		Dear RankMe Client,
+
+		You recently requested to be sent a password for the Adviser Research Centre. Your username is your email address and your temporary password is 
+
+		<%=password%>
+
+		To access the site, please go to: http://www.rankme.com
+
+		Once you log in with your temporary password, you will be prompted to create a new password. Please ensure your new password contains:
+
+		- at least 7 letters
+		- at least one number
+		- minimum length 8 characters.
+
+		Should you have any access problems, please contact our Client Service Team on helpdesk@rankme.com or +66 089 2771748.
+
+		Kind Regards,
+
+		The RankMe Teams
+
+		]]>
+		
+	</template>
+	
+</rankme>

@@ -6,13 +6,32 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/jquery")
+        <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/Addons/jquery.blockUI/jquery.blockUI.js"></script>
         @Scripts.Render("~/bundles/modernizr")
+        <script src="http://github.com/cowboy/jquery-bbq/raw/master/jquery.ba-bbq.min.js"></script>
+        <script src="https://raw.github.com/carhartl/jquery-cookie/v1.2.0/jquery.cookie.js"></script>
+        <script src="~/Scripts/Addons/jquery.watermark-3.1.4/jquery.watermark.min.js"></script>
+        @Scripts.Render("~/bundles/enginescript")
     </head>
     <body>
+        
+        <div class="growlUI" style="display:none;"></div>
+
+
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">
+                        <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcTZj9Ovpw2l1xpcpkhzVFVRc8Ahd-2KlFyYwmiOFOr96Kj4-RdP"
+                             width="64" />
+                        
+                        @*@Html.ActionLink("your logo here", "Index", "Home")*@
+
+                    </p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -28,7 +47,7 @@
                 </div>
             </div>
         </header>
-        <div id="body">
+        <div id="body" class="ui-widget">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
@@ -42,7 +61,8 @@
             </div>
         </footer>
 
-        @Scripts.Render("~/bundles/jquery")
+        @*@Scripts.Render("~/bundles/jquery")*@
         @RenderSection("scripts", required: false)
+       
     </body>
 </html>

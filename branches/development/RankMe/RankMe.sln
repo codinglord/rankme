@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankMe", "RankMe\RankMe.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankMe.Tests", "RankMe.Tests\RankMe.Tests.csproj", "{59407AB5-1341-49CE-855F-872E35D6B03C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankMe.Entities", "RankMe.Entities\RankMe.Entities.csproj", "{15183A17-AEBE-4B39-90D5-766C5A498508}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{59407AB5-1341-49CE-855F-872E35D6B03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59407AB5-1341-49CE-855F-872E35D6B03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59407AB5-1341-49CE-855F-872E35D6B03C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15183A17-AEBE-4B39-90D5-766C5A498508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15183A17-AEBE-4B39-90D5-766C5A498508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15183A17-AEBE-4B39-90D5-766C5A498508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15183A17-AEBE-4B39-90D5-766C5A498508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

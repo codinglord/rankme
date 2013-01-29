@@ -1,0 +1,57 @@
+﻿@using RankMe.Utilities
+
+<div id="@Helper.GetGadgetId(this)" class="gadget-AccountRecovery ui-widget-container">
+
+
+   
+
+
+        <div class="ui-widget-header">
+            Account Recovery
+        </div>
+
+        <div class="gadget-description">
+
+            <p>
+                If you can't sign in or have forgotten your password, enter your email address below, and we will send you instructions to get you signed in.
+            </p>
+
+        </div>
+        
+
+        <input id="txtEmail" />
+
+        <button id="btnPost">Send Account Recovery Email</button>
+    
+
+
+
+
+
+
+</div>
+
+<script>
+
+    $(function () {
+       
+
+        var context = $('#@Helper.GetGadgetId(this)');
+        context.find('#txtEmail').watermark('Email');
+
+        context.find('#btnPost').click(function () {
+
+            $.helper.ajaxPost(
+                '/RankMeAccount/RecoverAccount',
+                {
+                    email: context.find('#txtEmail').val()
+                }
+            );
+
+        });
+
+        
+        
+    })
+
+</script>
